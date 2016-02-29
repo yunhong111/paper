@@ -1,0 +1,20 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\section{Single RL}
+% problem description
+  We first extend CO2 to the case with single switch and multiple receivers. The topology of the switch and receivers is shown in Figure {}. 
+  
+% RL reinforcement learning
+
+\section{Multiple RL}
+
+\end{document}

@@ -11,9 +11,12 @@
 
 \section{Single RL}
 % problem description
+  We first extend CO2 to the case with single switch and multiple receivers. The topology of the switch and receivers is shown in Figure {}. The switch holds rules with multiple action tag, and each action represents forwording the traffic to the receiver with the same action tag. The receivers feedback the top overselected IPs with regard to bytes volume to controller, and the controller decides which one to put into the Blacklist in the switch. The challenge is that the Blacklist memory is a bottleneck. We propose a Reinforcement Learning (RL) based Approach (RLA) in the controller to allocate Blacklist space to the rules with different actions.
+  
+  
   
 % RL reinforcement learning
-
+  
 \section{Multiple RL}
 
 \end{document}
