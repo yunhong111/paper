@@ -1,0 +1,15 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+\maketitle
+We use one example to show that the 
+
+\section{}
+
+\end{document}

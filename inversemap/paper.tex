@@ -1,0 +1,145 @@
+\documentclass[preprint]{sig-alternate-10pt}
+
+\usepackage{amsmath,amssymb,alltt,times,mathptmx,graphicx}
+\usepackage{mathrsfs}
+\usepackage{courier,subfigure,color,xspace }
+\usepackage{multirow}
+\usepackage{balance}
+\usepackage[hyphens]{url}
+\usepackage{float} %must be before hyperref
+\usepackage[breaklinks=true]{hyperref} %must be before algorithm
+\usepackage{breakurl}
+
+
+% For algorithms in ACM template
+\makeatletter
+
+
+
+\newif\if@restonecol
+\makeatother
+\let\algorithm\relax
+\let\endalgorithm\relax
+
+\usepackage{algorithmic}
+\usepackage[ruled,vlined]{algorithm2e}
+
+%\usepackage[linesnumbered,figure]{algorithm2e}
+\usepackage[ampersand]{easylist}
+\usepackage{ifpdf}
+\usepackage{array}
+\usepackage{appendix}
+
+\usepackage{etoolbox} % this is better than \small for bibilography
+\apptocmd{\thebibliography}{\small}{}{}
+
+\usepackage[colorinlistoftodos,textsize=small,shadow]{todonotes}
+%\usepackage[colorinlistoftodos,textsize=small,shadow,disable]{todonotes}
+
+\usepackage{ifpdf}
+\ifpdf
+   \usepackage{epstopdf}
+   \DeclareGraphicsRule{.eps}{pdf}{.pdf}{`epstopdf #1}
+   \pdfcompresslevel=9
+\else
+
+\fi
+
+\newif\iftechrep
+\techrepfalse 
+%\techreptrue
+
+\newcommand{\ADD}[1]{{#1}}
+\newcommand{\DEL}[1]{{}}
+
+%for equation and text distance!
+\usepackage{etoolbox}
+\apptocmd\normalsize{%
+\abovedisplayskip=0pt 
+\abovedisplayshortskip=0pt
+\belowdisplayskip=0pt
+\belowdisplayshortskip=0pt
+}{}{}
+
+% \setlength{\textwidth}{6.5in}
+% \setlength{\oddsidemargin}{0in}
+% \setlength{\textheight}{9in}
+% \setlength{\topmargin}{0in}\date{}
+% \setlength{\headheight}{0in}
+% \setlength{\headsep}{0in}
+\pdfpagewidth=8.5in 
+\pdfpageheight=11in
+%\clubpenalty=10000
+%\widowpenalty =10000
+ \addtolength{\subfigcapskip}{-5pt}
+ \setlength{\textfloatsep}{0pt}
+ \setlength{\floatsep}{0pt}
+ \setlength{\dblfloatsep}{0pt}
+ \setlength{\dbltextfloatsep}{0pt}
+  
+
+
+
+\newcommand{\minlan}[1]{{\color{red}#1}}
+\newcommand{\hao}[1]{{\color{blue}#1}}
+\newcommand{\nick}[1]{{\color{green}#1}}
+\newcommand{\yunhong}[1]{{\color{purple}#1}}
+
+
+\newcommand{\dream}{\textsl{\textsc{\small{DREAM}}}}
+\newcommand{\scream}{\textsl{\textsc{\small{SCREAM}}}}
+
+\newcommand{\paraspace}{\vspace{0.05in}}
+\newcommand{\parab}[1]{\paraspace\noindent{\bf #1} }
+\newcommand{\parae}[1]{\paraspace\noindent{\em #1} }
+\newcommand{\parabe}[1]{\paraspace\noindent{\bf \em #1} }
+\newcommand{\tightcaption}[1]{\vspace{-5pt} \caption{{\small #1}}}
+\newcommand{\Footnote}[1]{{\footnote {\small #1}}}
+
+\newcommand{\squishlist}{
+   \begin{list}{$\bullet$}
+    { \setlength{\itemsep}{0pt}      \setlength{\parsep}{3pt}
+      \setlength{\topsep}{3pt}       \setlength{\partopsep}{0pt}
+      \setlength{\leftmargin}{1.0em} \setlength{\labelwidth}{1em}
+      \setlength{\labelsep}{0.5em} } }
+
+\newcommand{\squishlisttwo}{
+   \begin{list}{$\bullet$}
+    { \setlength{\itemsep}{0pt}    \setlength{\parsep}{0pt}
+      \setlength{\topsep}{0pt}     \setlength{\partopsep}{0pt}
+      \setlength{\leftmargin}{1em} \setlength{\labelwidth}{1.5em}
+      \setlength{\labelsep}{0.5em} } }
+
+\newcommand{\squishend}{
+    \end{list}  }
+
+    \newcommand{\system}{CO2\xspace} 
+  
+%\makeatletter\let\H@refstepcounter\refstepcounter
+
+\newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
+
+\title{Collaborative Packet Classification with Overselection}
+\author{
+Hao Wu{$^\dag$}\thanks{Co-primary authors placed in alphabetic order.}\quad
+Yunhong Xu{$^\S$}\samethanks[1]\quad
+Nick Duffield{$^\S$}\quad
+Minlan Yu{$^\ddag$}\quad
+Bin Liu{$^\dag$} \\
+\affaddr{$^\dag$ Tsinghua University}\quad
+\affaddr{$^\S$ Texas A\&M University}\quad
+\affaddr{$^\ddag$ University of Southern California}\\
+\affaddr{wu-h11@mails.tsinghua.edu.cn, \{yunhong,duffieldng\}@tamu.edu, minlanyu@usc.edu, liub@mail.tsinghua.edu.cn}
+} 
+      
+\begin{document}   
+\maketitle
+
+\input{rl}
+
+\bibliographystyle{abbrv}
+\bibliography{paper}   
+
+
+\balance
+\end{document}
